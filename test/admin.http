@@ -1,0 +1,9 @@
+
+### Create Order via Action
+POST http://localhost:4004/browse/submitOrder
+Authorization: Basic bob:
+Content-Type: application/json
+
+{ "book":201, "amount":100 }
+
+

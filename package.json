@@ -1,0 +1,37 @@
+{
+    "name": "bookshop2",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4",
+        "express": "^4",
+        "@sap/hana-client": "^2.4.177"
+    },
+    "devDependencies": {
+        "@sap/ux-specification": "^1.78.12",
+        "sqlite3": "^5.0.0"
+    },
+    "scripts": {
+        "start": "npx cds run"
+    },
+    "cds": {
+        "requires": {
+            "API_BUSINESS_PARTNER": {
+                "kind": "odata",
+                "model": "srv\\external\\API_BUSINESS_PARTNER",
+                "credentials": {
+                    "destination": "s4hc"
+                }
+            },
+            "db": {
+                "kind": "sql"
+            }
+        }
+    },
+    "sapux": [
+        "app/authors"
+    ]
+}

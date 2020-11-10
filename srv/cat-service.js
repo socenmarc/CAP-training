@@ -1,5 +1,6 @@
 const cds = require('@sap/cds')
 
+const { Yy1_KantoxApi } = require('./generated/modules/yy-1-kantoxapi-cds-service/index');
 
 
 module.exports = async function () {

@@ -1,0 +1,7 @@
+{
+  "YY1_KANTOXAPI_CDS": {
+    "directoryName": "yy-1-kantoxapi-cds-service",
+    "servicePath": "/sap/opu/odata/sap/YY1_KANTOXAPI_CDS",
+    "npmPackageName": "yy-1-kantoxapi-cds-service"
+  }
+}

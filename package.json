@@ -18,7 +18,7 @@
         "start": "npx cds run"
     },
     "cds": {
-        "requires": {            
+        "requires": {
             "db": {
                 "kind": "sql"
             }

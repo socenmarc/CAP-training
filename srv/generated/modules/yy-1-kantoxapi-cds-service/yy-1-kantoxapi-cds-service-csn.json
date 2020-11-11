@@ -1,0 +1,122 @@
+{
+    "definitions": {
+        "YY1_KANTOXAPI_CDS": {
+            "kind": "service"
+        },
+        "YY1_KANTOXAPI_CDS.YY1_KantoxAPI": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "CompanyCode": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "FiscalYear": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "AccountingDocument": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "AccountingDocumentItem": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "Supplier": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "IsCleared": {
+                    "type": "cds.Boolean"
+                },
+                "PostingDate": {
+                    "type": "cds.Date"
+                },
+                "DocumentDate": {
+                    "type": "cds.Date"
+                },
+                "DocumentReferenceID": {
+                    "type": "cds.String",
+                    "length": 16
+                },
+                "StatusSAP": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "StatusSAP_Text": {
+                    "type": "cds.String",
+                    "length": 60
+                },
+                "StatusKantox": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "StatusKantox_Text": {
+                    "type": "cds.String",
+                    "length": 60
+                },
+                "SendingDate": {
+                    "type": "cds.Timestamp"
+                },
+                "ReferenceBatchKantox": {
+                    "type": "cds.String",
+                    "length": 25
+                },
+                "KantoxOrderReference": {
+                    "type": "cds.String",
+                    "length": 25
+                },
+                "KantoxReference": {
+                    "type": "cds.String",
+                    "length": 25
+                },
+                "ValueDateKantox": {
+                    "type": "cds.Timestamp"
+                },
+                "toStatusKantoxAsso": {
+                    "type": "cds.Association",
+                    "target": "YY1_KANTOXAPI_CDS.YY1_KANTOX_STATUS"
+                },
+                "toStatusSAPAsso": {
+                    "type": "cds.Association",
+                    "target": "YY1_KANTOXAPI_CDS.YY1_SAP_STATUS"
+                }
+            }
+        },
+        "YY1_KANTOXAPI_CDS.YY1_KANTOX_STATUS": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "Code": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "Description": {
+                    "type": "cds.String",
+                    "length": 60
+                }
+            }
+        },
+        "YY1_KANTOXAPI_CDS.YY1_SAP_STATUS": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "Code": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "Description": {
+                    "type": "cds.String",
+                    "length": 60
+                }
+            }
+        }
+    }
+}

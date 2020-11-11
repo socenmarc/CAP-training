@@ -7,8 +7,9 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^4",
-        "express": "^4",
-        "@sap/hana-client": "^2.4.177"
+        "@sap/edmx2csn": "^1.0.9",
+        "@sap/hana-client": "^2.4.177",
+        "express": "^4"
     },
     "devDependencies": {
         "@sap/ux-specification": "^1.78.12",

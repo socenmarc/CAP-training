@@ -179,15 +179,15 @@ var Yy1_Sap_Status_1 = require("./Yy1_Sap_Status");
      */
     Yy1_KantoxApi.VALUE_DATE_KANTOX = new core_1.DateField('ValueDateKantox', Yy1_KantoxApi, 'Edm.DateTimeOffset');
     /**
-     * Static representation of the one-to-one navigation property [[toStatusKantox]] for query construction.
+     * Static representation of the one-to-one navigation property [[toStatusKantoxAsso]] for query construction.
      * Use to reference this property in query operations such as 'select' in the fluent request API.
      */
-    Yy1_KantoxApi.TO_STATUS_KANTOX = new core_1.OneToOneLink('to_StatusKantox', Yy1_KantoxApi, Yy1_Kantox_Status_1.Yy1_Kantox_Status);
+    Yy1_KantoxApi.TO_STATUS_KANTOX_ASSO = new core_1.OneToOneLink('toStatusKantoxAsso', Yy1_KantoxApi, Yy1_Kantox_Status_1.Yy1_Kantox_Status);
     /**
-     * Static representation of the one-to-one navigation property [[toStatusSap]] for query construction.
+     * Static representation of the one-to-one navigation property [[toStatusSapAsso]] for query construction.
      * Use to reference this property in query operations such as 'select' in the fluent request API.
      */
-    Yy1_KantoxApi.TO_STATUS_SAP = new core_1.OneToOneLink('to_StatusSAP', Yy1_KantoxApi, Yy1_Sap_Status_1.Yy1_Sap_Status);
+    Yy1_KantoxApi.TO_STATUS_SAP_ASSO = new core_1.OneToOneLink('toStatusSAPAsso', Yy1_KantoxApi, Yy1_Sap_Status_1.Yy1_Sap_Status);
     /**
      * All fields of the Yy1_KantoxApi entity.
      */
@@ -210,8 +210,8 @@ var Yy1_Sap_Status_1 = require("./Yy1_Sap_Status");
         Yy1_KantoxApi.KANTOX_ORDER_REFERENCE,
         Yy1_KantoxApi.KANTOX_REFERENCE,
         Yy1_KantoxApi.VALUE_DATE_KANTOX,
-        Yy1_KantoxApi.TO_STATUS_KANTOX,
-        Yy1_KantoxApi.TO_STATUS_SAP
+        Yy1_KantoxApi.TO_STATUS_KANTOX_ASSO,
+        Yy1_KantoxApi.TO_STATUS_SAP_ASSO
     ];
     /**
      * All fields selector.

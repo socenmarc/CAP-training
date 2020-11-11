@@ -126,11 +126,11 @@ export class Yy1_KantoxApi extends Entity implements Yy1_KantoxApiType {
   /**
    * One-to-one navigation property to the [[Yy1_Kantox_Status]] entity.
    */
-  toStatusKantox!: Yy1_Kantox_Status;
+  toStatusKantoxAsso!: Yy1_Kantox_Status;
   /**
    * One-to-one navigation property to the [[Yy1_Sap_Status]] entity.
    */
-  toStatusSap!: Yy1_Sap_Status;
+  toStatusSapAsso!: Yy1_Sap_Status;
 
   /**
    * Returns an entity builder to construct instances `Yy1_KantoxApi`.
@@ -188,8 +188,8 @@ export interface Yy1_KantoxApiType {
   kantoxOrderReference?: string;
   kantoxReference?: string;
   valueDateKantox?: Moment;
-  toStatusKantox: Yy1_Kantox_StatusType;
-  toStatusSap: Yy1_Sap_StatusType;
+  toStatusKantoxAsso: Yy1_Kantox_StatusType;
+  toStatusSapAsso: Yy1_Sap_StatusType;
 }
 
 export interface Yy1_KantoxApiTypeForceMandatory {
@@ -211,8 +211,8 @@ export interface Yy1_KantoxApiTypeForceMandatory {
   kantoxOrderReference: string;
   kantoxReference: string;
   valueDateKantox: Moment;
-  toStatusKantox: Yy1_Kantox_StatusType;
-  toStatusSap: Yy1_Sap_StatusType;
+  toStatusKantoxAsso: Yy1_Kantox_StatusType;
+  toStatusSapAsso: Yy1_Sap_StatusType;
 }
 
 export namespace Yy1_KantoxApi {
@@ -307,15 +307,15 @@ export namespace Yy1_KantoxApi {
    */
   export const VALUE_DATE_KANTOX: DateField<Yy1_KantoxApi> = new DateField('ValueDateKantox', Yy1_KantoxApi, 'Edm.DateTimeOffset');
   /**
-   * Static representation of the one-to-one navigation property [[toStatusKantox]] for query construction.
+   * Static representation of the one-to-one navigation property [[toStatusKantoxAsso]] for query construction.
    * Use to reference this property in query operations such as 'select' in the fluent request API.
    */
-  export const TO_STATUS_KANTOX: OneToOneLink<Yy1_KantoxApi, Yy1_Kantox_Status> = new OneToOneLink('to_StatusKantox', Yy1_KantoxApi, Yy1_Kantox_Status);
+  export const TO_STATUS_KANTOX_ASSO: OneToOneLink<Yy1_KantoxApi, Yy1_Kantox_Status> = new OneToOneLink('toStatusKantoxAsso', Yy1_KantoxApi, Yy1_Kantox_Status);
   /**
-   * Static representation of the one-to-one navigation property [[toStatusSap]] for query construction.
+   * Static representation of the one-to-one navigation property [[toStatusSapAsso]] for query construction.
    * Use to reference this property in query operations such as 'select' in the fluent request API.
    */
-  export const TO_STATUS_SAP: OneToOneLink<Yy1_KantoxApi, Yy1_Sap_Status> = new OneToOneLink('to_StatusSAP', Yy1_KantoxApi, Yy1_Sap_Status);
+  export const TO_STATUS_SAP_ASSO: OneToOneLink<Yy1_KantoxApi, Yy1_Sap_Status> = new OneToOneLink('toStatusSAPAsso', Yy1_KantoxApi, Yy1_Sap_Status);
   /**
    * All fields of the Yy1_KantoxApi entity.
    */
@@ -338,8 +338,8 @@ export namespace Yy1_KantoxApi {
     Yy1_KantoxApi.KANTOX_ORDER_REFERENCE,
     Yy1_KantoxApi.KANTOX_REFERENCE,
     Yy1_KantoxApi.VALUE_DATE_KANTOX,
-    Yy1_KantoxApi.TO_STATUS_KANTOX,
-    Yy1_KantoxApi.TO_STATUS_SAP
+    Yy1_KantoxApi.TO_STATUS_KANTOX_ASSO,
+    Yy1_KantoxApi.TO_STATUS_SAP_ASSO
   ];
   /**
    * All fields selector.

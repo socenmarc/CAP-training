@@ -4,9 +4,15 @@ const cds = require('@sap/cds')
 
 module.exports = async function () {
 
+    // NEW
     const db = await cds.connect.to('db') // connect to database service
-    const { Books } = db.entities         // get reflected definitions
+    const { Books, BusinessPartners } = db.entities         // get reflected definitions
+    const extSrv = await cds.connect.to('API_BUSINESS_PARTNER');
 
+    this.on('READ', BusinessPartners, req => extSrv.tx(req).run(req.query))
+    // NEW
+   
+    
     // Register your event handlers in here, e.g....
     this.after('READ', 'Books', each => {
 
